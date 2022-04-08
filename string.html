@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 5 String</title>
+  </head>
+  <body>
+    <script>
+      // charAt() returns the character at a specified position in a string
+      text = "Hello this is javascript";
+      document.write(text.charAt(0) + "<br>"); // output "h"
+
+      //   charCodeAt() returns the Unicode of the character at a specified position in a String
+      document.write(text.charCodeAt(3) + "<br>");
+
+      // The concat() method joins two or more strings.
+      // The concat() method does not change the existing strings.
+      // The concat() method returns a new string.
+      var st1 = "Hello ";
+      var st2 = "World";
+      document.write(st1.concat(st2) + "<br>");
+
+      //   indexOf() returns the position of the first occurrence of a value in a string.
+      var x = "Hey There JS";
+      document.write(x.indexOf("There") + "<br>");
+
+      //   localeCompare() returns one of 3 numbers indicating the sort order.
+      let text1 = "ab";
+      let text2 = "cd";
+      document.write(text1.localeCompare(text2) + "<br>");
+      document.write(text1.match(text2) + "<br>");
+
+      //   match() searches for a match in a string.
+      let rain = "The rain in SPAIN stays mainly in the plain";
+      document.write(rain.match("rain") + "<br>");
+
+      //   replace() searches a string for a value, and returns a new string with the specified value(s) replaced:
+      txt1 = "hello world";
+      document.write(txt1.replace("world", "javascript") + "<br>");
+
+      //   search() searches a string for a value and returns the position of the first match:
+      txt2 = "Mr. Blue has a blue house";
+      document.write(txt2.search("has") + "<br>");
+
+      //   slice() extracts a part of a string and returns the extracted part:
+      document.write(txt2.slice(4, 20) + "<br>");
+
+      //   split() splits a string into an array of substrings, and returns the array:
+      let txt = "How are you doing today?";
+      document.write(txt.split(" ") + "<br>");
+
+      //   substr() extracts a part of a string:
+      document.write(txt.substr(0, 4) + "<br>");
+
+      //   toLocaleLowerCase() converts a string to lowercase letters, using current locale:
+
+      // trim() removes whitespace from both sides of a string
+      var z = "                    heLLo           Javasc   ri   p   t";
+      document.write(z.trim());
+    </script>
+  </body>
+</html>

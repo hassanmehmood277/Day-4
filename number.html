@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 4</title>
+  </head>
+  <body>
+    <script>
+      var obj = {
+        firstname: "Hassan",
+        lastname: "Mehmood",
+        gender: "Male",
+        religion: "Islam",
+        name: function () {
+          return this.firstname + " " + this.lastname;
+        },
+      };
+      document.write(obj.name());
+    </script>
+    <br />
+    <br />
+    <script>
+      // NaN is a JavaScript reserved word indicating that a number is not a legal number.
+      // Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):
+
+      //                                                Number Methods
+
+      //   The toString() method converts a number to a string.
+      var x = 50;
+      document.write(x.toString() + " toString()" + "<br>");
+
+      //   The toExponential() method returns a string, with the number rounded and written using exponential notation
+      document.write(x.toExponential() + " toExponential()" + "<br>");
+
+      //   The toFixed() method rounds a number to a given number of digits.
+      document.write(x.toFixed(2) + " toFixed()" + "<br>");
+
+      //   The toPrecision() method returns a string, with a number written with a specified length:
+      document.write((9.5687452).toPrecision(3) + " toPrecision()" + "<br>");
+
+      //   The valueOf() method returns a number as a number:
+      document.write(x.valueOf() + " valueOf()" + "<br>");
+
+      //   Number() can be used to convert JavaScript variables to numbers:
+      //   Number() can also convert a date to a number.
+      document.write(Number(90) + "<br>" + Number("Demo") + "<br>");
+
+      //   parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:
+      document.write(parseInt("-9.245") + "<br>");
+      //   parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned
+      document.write(parseFloat("-9.245 626") + "<br>");
+
+      //   MAX_VALUE returns the largest possible number in JavaScript.
+      x = Number.MAX_VALUE;
+      document.write(x + "<br>");
+      //   MIN_VALUE returns the lowest possible number in JavaScript.
+      y = Number.MIN_VALUE;
+      document.write(y + "<br>");
+
+      //   POSITIVE_INFINITY
+      document.write(Number.POSITIVE_INFINITY + "<br>");
+      //   NEGATIVE_INFINITY
+      document.write(Number.NEGATIVE_INFINITY + "<br>");
+      // NaN
+      document.write(NaN + "<br>");
+    </script>
+  </body>
+</html>
