@@ -7,6 +7,119 @@
     <title>Day 4 Arrays</title>
   </head>
   <body>
-    
+    <script>
+      // length property
+      var arr = [1, 2, 3, 4, 5, 6];
+      document.write(arr.length + "<br>");
+
+      // prototype property
+
+      var fruits = ["apple", "mango", "apricot", "graphes"];
+      Array.prototype.upcase = function () {
+        for (let i = 0; i < this.length; i++) {
+          this[i] = this[i].toUpperCase();
+        }
+      };
+      fruits.upcase();
+      document.write(fruits + "<br>");
+
+      // The filter() method creates a new array filled with elements that pass a test provided by a function.
+      // The filter() method does not execute the function for empty elements.
+      var young = [19, 20, 14, 35, 37];
+      function demo(x) {
+        return x >= 18;
+      }
+      document.write(young.filter(demo) + "<br>");
+
+      // every() returns true if all elements in an array pass a test (provided as a function).
+      var indexes = [19, 20, 21, 35, 37];
+      function sec(y) {
+        return y >= 18;
+      }
+      document.write(indexes.every(sec) + "<br>");
+
+      // The forEach() method calls a function for each element in an array.
+      var add = 0;
+      var hem = [2, 4, 6, 8, 10];
+      function sum(z) {
+        add += z;
+      }
+      hem.forEach(sum);
+      document.write(add + "<br>");
+
+      // findIndex() returns the index of the first element that passes a test (provided by a function).
+      const ages = [3, 20, 18, 15, 30];
+      function checkAge(age) {
+        return age > 18;
+      }
+      document.write(ages.findIndex(checkAge) + "<br>");
+
+      // The join() method returns an array as a string.
+      var fruits = ["Banana", "Grapes", "Mango"];
+      let str = fruits.join(" , ");
+      document.write(str + "<br>");
+
+      // lastIndexOf() returns the last index (position) of a specified value:
+
+      // map() creates a new array from calling a function for every array element.
+      // map() calls a function once for each element in an array.
+      // map() does not execute the function for empty elements.
+      const variab = [65, 44, 12, 4];
+      const newArr = variab.map(myFunction);
+      document.write(newArr + "<br>");
+      function myFunction(num) {
+        return num * 10;
+      }
+
+      // The pop() method removes (pops) the last element of an array.
+      // The pop() method returns the removed element.
+      let poppingarr = ["apple", "mango", "strawberry", "melon"];
+      let result = poppingarr.pop();
+      document.write(result + "<br>");
+
+      // The push() method adds new items to the end of an array.
+      let newelem = poppingarr.push("apple");
+      document.write(poppingarr + "<br>");
+
+      // The reduce() method executes a reducer function for array element.
+      // The reduce() method returns a single value: the function's accumulated result.
+      var numbers = [9, 98, 6, 458, 254, 741];
+      function red(total, num) {
+        return total - num;
+      }
+      document.write(numbers.reduce(red) + "<br>");
+
+      // The reduceRight() method works from right to left.
+      document.write(numbers.reduceRight(red) + "<br>");
+      document.write(numbers.reverse() + "<br>");
+
+      // The shift() method removes the first item of an array.
+      // The shift() method changes the original array.
+
+      // The slice() method returns selected elements in an array, as a new array.
+      // The slice() method selects from a given start, up to a (not inclusive) given end.
+      // The slice() method does not change the original array.
+      var newarr = ["apple", "grapes", "mango", "melon", "chocolate"];
+      slicc = newarr.slice(2, 4);
+      document.write(slicc + "<br>");
+
+      // The some() method checks if any array elements pass a test (provided as a function).
+
+      // The sort() sorts the elements of an array.
+      // The sort() overwrites the original array.
+      // The sort() sorts the elements as strings in alphabetical and ascending order.
+
+      // The splice() method adds and/or removes array elements.
+      // The splice() method overwrites the original array.
+
+      let spl = ["apple", "grapes", "mango", "melon", "chocolate"];
+      let v = spl.splice(2, 0, "vegies", "pasta");
+      document.write(spl + "<br>");
+
+      // The unshift() method adds new elements to the beginning of an array.
+      var shf = ["apple", "grapes", "mango", "melon", "chocolate"];
+      shf.unshift("new element");
+      document.write(shf + "<br>");
+    </script>
   </body>
 </html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 4 Date</title>
+  </head>
+  <body>
+    <script>
+      // The getDate() method returns the day of the month (1 to 31) of a date.
+      // The getDay() method returns the day of the week (from 0 to 6) of a date.
+      // getFullYear() returns the year with four digits:
+      // getHours() returns the hour (from 0 to 23) of a date:
+      // getMilliseconds() returns the milliseconds of a date:
+      var x = new Date();
+      document.write(x.getDate() + "<br>");
+      document.write(x.getDay() + "<br>");
+      document.write(x.getFullYear() + "<br>");
+      document.write(x.getHours() + "<br>");
+      document.write(x.getMilliseconds() + "<br>");
+      document.write(x.getTime() + "<br>");
+      document.write(x.getUTCDate() + "<br>");
+
+      // setDate() sets the day of the month of a date:
+      // setMilliseconds() sets the milliseconds of a date object:
+      // toJSON() returns a date as a string, using JSON date formatting:
+      // toLocaleDateString() returns the date (not the time) of a date, as a string, using locale conventions:
+      var y = new Date();
+      var z = new Date();
+      y.setFullYear(2022);
+      document.write(y + "<br>");
+      document.write(z.setMilliseconds(125) + "<br>");
+      const d = new Date();
+      let text = d.toJSON();
+      document.write(text + "<br>");
+      let textt = d.toLocaleDateString();
+      document.write(textt + "<br>");
+    </script>
+  </body>
+</html>

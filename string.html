@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Day 5 String</title>
+    <title>Day 4 String</title>
   </head>
   <body>
     <script>
@@ -26,6 +26,9 @@
       var x = "Hey There JS";
       document.write(x.indexOf("There") + "<br>");
 
+      // -1 if the string is sorted before the compareString
+      //  0 if the two strings are equal
+      //  1 if the string is sorted after the compareString
       //   localeCompare() returns one of 3 numbers indicating the sort order.
       let text1 = "ab";
       let text2 = "cd";
@@ -41,7 +44,7 @@
       document.write(txt1.replace("world", "javascript") + "<br>");
 
       //   search() searches a string for a value and returns the position of the first match:
-      txt2 = "Mr. Blue has a blue house";
+      txt2 = "Mr.Blue has a blue house";
       document.write(txt2.search("has") + "<br>");
 
       //   slice() extracts a part of a string and returns the extracted part:
@@ -49,9 +52,12 @@
 
       //   split() splits a string into an array of substrings, and returns the array:
       let txt = "How are you doing today?";
-      document.write(txt.split(" ") + "<br>");
+      dem = txt.split(" ");
+      document.write(dem[1] + "<br>");
 
       //   substr() extracts a part of a string:
+      // string.substr(start, length)
+      // string.substring(start, end)
       document.write(txt.substr(0, 4) + "<br>");
 
       //   toLocaleLowerCase() converts a string to lowercase letters, using current locale:
